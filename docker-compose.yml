@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  app:
+    container_name: web
+    build: .
+    ports:
+      - 80:80
+  api:
+    container_name: api
+    hostname: api
+    build: ./api
+    restart: always
+    ports:
+      - 3000:3000
